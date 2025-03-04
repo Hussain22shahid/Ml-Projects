@@ -1,4 +1,7 @@
 pandas
 numpy
 seaborn
+matplotlib
+scikit-learn
+snowflake-connector-python[pandas]
 -e.
