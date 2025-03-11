@@ -3,5 +3,12 @@ numpy
 seaborn
 matplotlib
 scikit-learn
-snowflake-connector-python[pandas]
+mysql-connector-python
+pymssql
+kagglehub[hf-datasets]
+kaggle
+google-cloud-storage
+schedule
+reportlab
+xgboost
 -e.
