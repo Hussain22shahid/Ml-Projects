@@ -11,4 +11,10 @@ google-cloud-storage
 schedule
 reportlab
 xgboost
+feast
+psycopg2
+psycopg
+snowflake-connector-python
+google-cloud-secret-manager
+apache-airflow
 -e.
