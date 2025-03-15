@@ -17,4 +17,5 @@ psycopg
 snowflake-connector-python
 google-cloud-secret-manager
 apache-airflow
+prefect
 -e.

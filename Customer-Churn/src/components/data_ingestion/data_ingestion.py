@@ -124,7 +124,7 @@ class DataIngestion:
         
             if df is not None:
                 # Save DataFrame as CSV
-                output_csv_path = r"D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv"
+                output_csv_path = r"D:\Ml-Projects\Customer-Churn\notebook\data\raw_ingested.csv"
                 df.to_csv(output_csv_path, index=False)
                 logging.info(f"Final dataset saved to: {output_csv_path}")
                 return df  # Return the dataframe
