@@ -8,7 +8,7 @@ from src.logger import logging
 def data_ingestion():
     try:
         flow_name="Data Ingestion"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\data_ingestion.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\data_ingestion\data_ingestion.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
     except subprocess.CalledProcessError as e:
         logging.error(f"Error in {flow_name}:\n{e.stderr}")
@@ -19,7 +19,7 @@ def data_ingestion():
 def raw_data_storage(flow_name):
     try:
         flow_name="Raw Data Storage"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\raw_data_Storage.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\rawdata\raw_data_Storage.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:
@@ -30,7 +30,7 @@ def raw_data_storage(flow_name):
 def data_preparation(flow_name):
     try:
         flow_name="Data Preparation"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\data_preparation.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\datavalidation\data_validation.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:
@@ -41,7 +41,7 @@ def data_preparation(flow_name):
 def data_transformation(flow_name):
     try:
         flow_name="Data Transformation"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\data_transformation.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\datatransformation\data_transformation.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:
@@ -52,7 +52,7 @@ def data_transformation(flow_name):
 def data_validation(flow_name):
     try:
         flow_name="Data Validation"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\data_validation.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\datavalidation\data_validation.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:
@@ -63,7 +63,7 @@ def data_validation(flow_name):
 def feature_store(flow_name):
     try:
         flow_name="Feature Store"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\feature_store.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\featurestore\feature_store.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:
@@ -75,7 +75,7 @@ def feature_store(flow_name):
 def model_trainer(flow_name):
     try:
         flow_name="Model Trainer"
-        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\model_trainer.py"], capture_output=True, text=True, check=True)
+        result = subprocess.run(["python", r"D:\Ml-Projects\Customer-Churn\src\components\modeltrainer\model_trainer.py"], capture_output=True, text=True, check=True)
         logging.info(f"Successfully ran {flow_name}")
         return f"Output of {flow_name}:\n{result.stdout}"
     except subprocess.CalledProcessError as e:

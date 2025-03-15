@@ -13,8 +13,8 @@ def get_requirements(file_path:str)-> list[str]:
             requirements.remove(hypen_e_dot)
 
 setup(name="CustomerChurn",
-      version='0.0.1',
-      author='Shahid Hussain M',
-      author_email='hussainibe22@gmail.com',
-      packages=find_packages(),
-      install__requires=get_requirements('requirements.txt'))
+    version='0.0.1',
+    author='Shahid Hussain M',
+    author_email='hussainibe22@gmail.com',
+    packages=find_packages(),
+    install__requires=get_requirements('requirements.txt'))
