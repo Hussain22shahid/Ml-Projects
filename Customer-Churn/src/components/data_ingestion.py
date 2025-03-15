@@ -25,7 +25,6 @@ class DataIngestion:
         :return: Pandas DataFrame containing query results
         """
         try:
-            load_dotenv()  # Ensure env variables are loaded
 
             # Load Snowflake credentials from environment variables
             conn = snowflake.connector.connect(

@@ -68,6 +68,9 @@ class DataPreparation:
             plt.suptitle("Feature Distributions")
             plt.tight_layout()
             plt.show()
+            plt.savefig("img/numerical.png")
+            plt.close()
+
 
             # Boxplots to detect outliers
             plt.figure(figsize=(10, 6))
@@ -75,12 +78,16 @@ class DataPreparation:
             plt.xticks(rotation=90)
             plt.title("Outlier Detection")
             plt.show()
+            plt.savefig("img/Boxplots.png")
+            plt.close()
 
             # Churn Distribution Visualization
             plt.figure(figsize=(5, 4))
             sns.countplot(x="churn", data=df)
             plt.title("Churn Distribution")
             plt.show()
+            plt.savefig("img/Distribution.png")
+            plt.close()
 
             logging.info("Data Preparation Completed")
             return df
